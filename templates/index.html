@@ -14,7 +14,6 @@
           <h1>Mission to Mars</h1>
           <p><a class="btn btn-primary btn-lg" href= "/scrape" role="button">Scrape</a></p>
         </div>
-    
         <div class="row" id="mars-news">
           <div class="col-md-12">
               <h3>Mars News</h3>
@@ -41,9 +40,10 @@
                 <h3><center>Mars Hemispheres</center></h3>
                 {% for hemisphere in mars.mars_hemisphere_image_urls %}
                     <div class = "col-md-6">
+                      {{hemisphere.title}}
                         <div class = "thumbnail">
-                            <img src = {{hemisphere}}>
-                                <h3><cerberus class="jpg"><valles class="jpg"><schiaparelli class="jpg"><syrtis class="jpg"></syrtis></schiaparelli></valles></cerberus></h3>
+                            <img src = {{hemisphere.img_url}}>
+                                <h3>{{hemisphere.title}}</h3>
                             </div>
                         </div>
                 {% endfor %}
